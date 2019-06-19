@@ -2,6 +2,8 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const graphqlHttp = require('express-graphql')
 const { buildSchema } = require('graphql')
+const mongoose = require('mongoose')
+
 
 const app = express();
 app.use(bodyParser.json())
@@ -64,4 +66,6 @@ app.use(
     graphiql: true
   })
 );
+
+mongoose.connect('')
 app.listen(3000) 
